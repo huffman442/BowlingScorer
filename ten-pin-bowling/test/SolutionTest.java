@@ -5,11 +5,10 @@ public class SolutionTest {
     @Test
     public void BasicTests() {
         // assertEquals("expected", "actual");
-        System.out.println("Maybe this bowler should put bumpers on...\n ");
-        assertEquals(20, Solution.bowling_score("11 11 11 11 11 11 11 11 11 11"));
 
-        System.out.println("Woah! Perfect game!");
-        assertEquals(300, Solution.bowling_score("X X X X X X X X X XXX"));
+        Solution s = new Solution();
+        assertEquals("No spares no strikes equalling 20", 20, s.bowlingScore("11 11 11 11 11 11 11 11 11 11"));
+        assertEquals("Combined spares and strikes equaling 202", 202, s.bowlingScore("X 8/ 9/ 80 X X 9/ 9/ X X9/"));
+        assertEquals("All strikes resulting in 300", 300, s.bowlingScore("X X X X X X X X X XXX"));
     }
-
 }
